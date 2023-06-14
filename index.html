@@ -13,6 +13,21 @@ text_blurbs:
   image: 
     image_path: /uploads/travel/travel-1.jpg
     alt: A placeholder alt description
+itinerary:
+  heading: Upcoming travel destinations
+  image: 
+    image_path: /uploads/travel/travel-1.jpg
+    alt: A placeholder alt description
+    overlay_text: Currently in.....
+  destinations:
+    - location: Europe
+      date: 00 Month - 00 Month 2023
+    - location: Australia
+      date: 00 Month - 00 Month 2023
+    - location: Asia
+      date: 00 Month - 00 Month 2023
+    - location: Europe
+      date: 00 Month - 00 Month 2023
 seo:
   title: 
   description:
@@ -30,6 +45,26 @@ seo:
     <a href="{{ page.text_blurbs.button.url }}">
         {{ page.text_blurbs.button.text }}
     </a>
+</section>
+
+<!------------------------ Itinerary ------------------------>
+<section>
+  <h2>{{ page.itinerary.heading }}</h2>
+  <ul>
+    {% for item in page.itinerary.destinations %}
+      <li>
+        <div>{{ item.location }}</div>
+        <div>{{ item.date }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div>
+    <img src="{{ page.itinerary.image.image_path }}" 
+      alt="{{ page.itinerary.image.alt  | default: page.itinerary.heading }}">
+    <div>{{ page.itinerary.image.overlay_text }}</div>
+  </div>
+      
 </section>
 
 
