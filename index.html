@@ -1,6 +1,18 @@
 ---
 layout: default
 title: Homepage
+banner:
+  heading: A whole new world
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat non ipsam vel expedita, repellendus cum praesentium? Ducimus voluptates sit officiis, recusandae, hic vitae sequi illo est quasi accusantium quod!
+text_blurbs:
+  heading: A fascinating title
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat non ipsam vel expedita, repellendus cum praesentium? Ducimus voluptates sit officiis, recusandae, hic vitae sequi illo est quasi accusantium quod!
+  button:
+    text: Read more
+    url: "#"
+  image: 
+    image_path: /uploads/travel/travel-1.jpg
+    alt: A placeholder alt description
 seo:
   title: 
   description:
@@ -9,6 +21,17 @@ seo:
   keywords:
   hide-from-google: false
 ---
+
+<section>
+    <img src="{{ page.text_blurbs.image.image_path }}" 
+        alt="{{ page.text_blurbs.image.alt  | default: page.text_blurbs.heading }}">
+    <h2>{{ page.text_blurbs.heading }}</h2>
+    <p>{{ page.text_blurbs.description }}</p>
+    <a href="{{ page.text_blurbs.button.url }}">
+        {{ page.text_blurbs.button.text }}
+    </a>
+</section>
+
 
 <!-- {{site.data.site-settings.global-cta-options}} -->
 <!------------------------ Featured blog loop ------------------------>
