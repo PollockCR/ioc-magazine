@@ -4,6 +4,9 @@ title: Homepage
 banner:
   heading: A whole new world
   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat non ipsam vel expedita, repellendus cum praesentium? Ducimus voluptates sit officiis, recusandae, hic vitae sequi illo est quasi accusantium quod!
+  image: 
+    image_path: /uploads/travel/travel-1.jpg
+    alt: A placeholder alt description
 text_blurbs:
   heading: A fascinating title
   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat non ipsam vel expedita, repellendus cum praesentium? Ducimus voluptates sit officiis, recusandae, hic vitae sequi illo est quasi accusantium quod!
@@ -40,6 +43,9 @@ seo:
   keywords:
   hide-from-google: false
 ---
+
+<!------------------------ Banner ------------------------>
+{% include hero-banner.html %}
 
 <section>
     <img src="{{ page.text_blurbs.image.image_path }}" 
